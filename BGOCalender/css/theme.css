@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.BGOC {
+    width: 800px;
+    height: 450px;
+    padding: 20px;
+    border: 1px solid #dde6e9;
+
+}
+.BGOC > .calender {
+    width: 65%;
+    height: 100%;
+    float: left;
+}
+.BGOC > .calender > .ymSelect {
+    text-align: center;
+    color: #555;
+    font-size: 16px;
+}
+.BGOC > .calender > .ymSelect > .preClass, .BGOC > .calender > .ymSelect > .nextClass {
+    cursor: pointer;
+}
+.BGOC > .calender > .ymSelect > .preClass {
+    margin-right: 20px;
+}
+.BGOC > .calender > .ymSelect > .nextClass {
+    margin-left: 20px;
+}
+.BGOC > .calender > .calenderTable {
+    width: 90%;
+    height: 75%;
+    text-align: center;
+    margin: 0 auto;
+    table-layout: fixed;
+}
+.BGOC > .calender > .calenderTable > tbody > tr{
+    height: 45px;
+}
+.BGOC > .calender > .calenderTable > thead > tr > th{
+    color: #555;
+    font-size: 16px;
+    font-weight: 500;
+}
+.BGOC > .calender > .calenderTable > tbody > tr > td{
+    color: #555;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+}
+.BGOC > .calender > .calenderTable > tbody > tr > td:hover{
+    background-color: #eee;
+}
+.BGOC > .calender > .control {
+    border-top: 1px solid #ddd;
+    width: 85%;
+    margin: 5px auto;
+    padding: 30px 0;
+    color: #555;
+}
+.BGOC > .calender > .control > .mark {
+    font-size: 12px;
+    margin-right: 10px;
+}
+.BGOC > .calender > .control > .shangke {  
+    color: #1AACDA;
+}
+.BGOC > .calender > .control > .fangjia {
+    color: #FF8181;
+}
+.BGOC > .calender > .control > .shangke::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background-color: #1AACDA !important;
+}
+.BGOC > .calender > .control > .fangjia::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background-color: #FF8181 !important;
+}
+.BGOC > .valueShow {
+    float: left;
+    margin-left: 20px;
+    width: 30%;
+    height: 100%;
+    padding-top: 50px;
+}
+.BGOC > .valueShow > ul{
+    margin: 0;
+    padding: 0;
+}
+.BGOC > .valueShow > ul > li{
+    color: #555;
+    list-style: none;
+    height: 80px;
+    line-height: 80px;
+    margin-top: 5px;
+    padding: 0 10px;
+    border-bottom: 1px solid #ddd;
+}
+.BGOC > .valueShow > ul > .startClass > span.dateTitle, 
+.BGOC > .valueShow > ul > .endClass > span.dateTitle {
+    float: left;
+}
+.BGOC > .valueShow > ul > .startClass > span.dateCon, 
+.BGOC > .valueShow > ul > .endClass > span.dateCon, 
+.BGOC > .valueShow > ul > .totalClass > span, 
+.BGOC > .valueShow > ul > .onlyClass > span {
+    float: right;
+}
+.BGOC > .valueShow > ul > .onlyClass {
+    border-bottom: none;
+}
+.BGOC > .valueShow > ul > .totalClass > p, 
+.BGOC > .valueShow > ul > .onlyClass > p {
+    float: right;
+    margin: 0;
+}
+
+.BGOC > .valueShow > ul > .totalClass > p > span {
+    color: #1AACDA;
+}
+.BGOC > .valueShow > ul > .onlyClass > p > span {
+    color: #FF8181;
+}
+
+.notMonthly {
+    color: #ccc !important;
+}
+.holiday {
+    color: #FF8181 !important;
+}
+.selectDate {
+    color: #1AACDA !important;
+}
+
+input[type=checkbox] {
+	visibility: hidden;
+    margin-right: 15px;
+}
+
+.selectStuDate.selectStuDate::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    display: block;
+    position: absolute;
+    background-color: #1AACDA;
+    bottom: 0;
+    left: 30px;
+    border-radius: 50%;
+}
+
+.checkboxFive {
+	position: relative;
+    float: left;
+    margin-left: 50px;
+}
+
+.checkboxFive label {
+	cursor: pointer;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 0;
+  	left: 0;
+	background: #eee;
+	border:1px solid #ddd;
+}
+
+.checkboxFive label:after {
+	opacity: 0.2;
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 5px;
+	background: transparent;
+	top: 5px;
+	left: 5px;
+	border: 3px solid #333;
+	border-top: none;
+	border-right: none;
+ 
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.checkboxFive label:hover::after {
+	opacity: 0.5;
+}
+ 
+.checkboxFive input[type=checkbox]:checked + label:after {
+	opacity: 1;
+}
